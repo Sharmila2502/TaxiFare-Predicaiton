@@ -4,7 +4,7 @@ import pickle
 import streamlit as st
 import joblib
 encoder_path = "encod_data.pkl" 
-model = joblib.load('knn.pickle')
+model = pickle.load('knn.pickle')
 
 with open(encoder_path, 'rb') as f:
     encoder = pickle.load(f)
