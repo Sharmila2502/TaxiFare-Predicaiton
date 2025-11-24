@@ -3,8 +3,8 @@ import numpy as np
 import pickle
 import streamlit as st
 import joblib
-encoder_path = "Desktop/encod_data.pkl" 
-model = joblib.load('Desktop/knn_joblib.pkl')
+encoder_path = "encod_data.pkl" 
+model = joblib.load('knn.pickle')
 
 with open(encoder_path, 'rb') as f:
     encoder = pickle.load(f)
