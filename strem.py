@@ -2,15 +2,14 @@ import pandas as pd
 import numpy as np
 import pickle
 import streamlit as st
-import joblib
 from PIL import Image
 from datetime import datetime
 file_path = 'fencod_data.pkl'
 with open(file_path , 'rb') as f:
     encoder = pickle.load(f)
-model_path = 'dt_joblib.pkl'
+model_path = 'dt.pickle'
 with open(model_path , 'rb') as fm:
-    model = joblib.load(fm)
+    model = pickle.load(fm)
 
 st.title("Machine Learning Prediction App")
 st.header("Enter the details for prediction:")
