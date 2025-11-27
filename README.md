@@ -4,12 +4,12 @@ Predict taxi fare amounts for urban rides using a trained Decision Tree model wi
 
 ## Table of Contents
 1. [Project Overview](#project-overview)
-2. [Dataset](#dataset)
-3. [Data Preprocessing](#data-preprocessing)
+2. [Features](#features)
+3. [Usage](#usage)
 4. [Feature Engineering](#feature-engineering)
 5. [Model Building](#model-building)
 6. [Evaluation](#evaluation)
-7. [Conclusion](#conclusion)
+
 
 🚖 Project Overview
 
@@ -82,10 +82,13 @@ Save the model and encoder using pickle
 ## Evaluation
 
 The evaluation metrics and results for the taxi fare prediction model are as follows:
-Mean Absolute Error 0.8158004544925723
-Mean Squeared Error 2.3300334449661406
-R2 Score For Train Data 0.9633374170276736
-R2 Score For Test Data 0.9577036579202768
+Mean Absolute Error 0.81
+
+Mean Squeared Error 2.33
+
+R2 Score For Train Data 0.96
+
+R2 Score For Test Data 0.95
 
 
 
