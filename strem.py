@@ -8,7 +8,10 @@ from datetime import datetime
 file_path = 'fencod_data.pkl'
 with open(file_path , 'rb') as f:
     encoder = pickle.load(f)
-model = joblib.load('dt_joblib.pkl')
+model_path = 'dt_joblib.pkl'
+with open(model_path , 'rb') as fm:
+    model = joblib.load(fm)
+
 st.title("Machine Learning Prediction App")
 st.header("Enter the details for prediction:")
 passenger_count = st.number_input('Passenger Count', min_value=1, max_value=6, step=1)
