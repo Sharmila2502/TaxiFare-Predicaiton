@@ -5,15 +5,10 @@ import streamlit as st
 import joblib
 from PIL import Image
 from datetime import datetime
-encoder_path = "fencod_data.pkl" 
-with open(encoder_path, 'rb') as f:
-    encoder = pickle.load(f)
+encoder = pickle.load('fencod_data.pkl')
 model = joblib.load('dt_joblib.pkl')
-
-
 st.title("Machine Learning Prediction App")
 st.header("Enter the details for prediction:")
-
 passenger_count = st.number_input('Passenger Count', min_value=1, max_value=6, step=1)
 distance_km=st.number_input('Trip Distance (km)', min_value=0.0, step=0.1)
 Duration=st.number_input('Duration', min_value=1, max_value=50, step=1)
