@@ -2,7 +2,6 @@ pandas
 numpy
 scipy
 streamlit
-joblib
 pickle
 Pillow
 scikit-learn
