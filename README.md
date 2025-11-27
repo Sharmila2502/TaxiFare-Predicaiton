@@ -62,7 +62,7 @@ Open the provided local URL in your browser.
 
 Enter trip details using the interactive form and click Predict to get the fare estimate instantly.
 
-## Feature Engineering
+📜 Feature Engineering
 
 - Time-based features: Extracted features like hour, minute, date, day of the week, month, and year from the pickup date and time.
 - Distance calculation: Used the Haversine formula to compute the distance between pickup and dropoff locations based on their longitude and latitude.
@@ -79,9 +79,10 @@ Train a Decision Tree Regressor or any other regression model
 
 Save the model and encoder using pickle
 
-## Evaluation
+📈 Evaluation
 
 The evaluation metrics and results for the taxi fare prediction model are as follows:
+
 Mean Absolute Error 0.81
 
 Mean Squeared Error 2.33
