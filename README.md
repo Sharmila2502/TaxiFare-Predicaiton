@@ -81,8 +81,11 @@ Save the model and encoder using pickle
 
 ## Evaluation
 
-The evaluation metrics and results for the taxi fare prediction model will be provided after running different algorithms.
+The evaluation metrics and results for the taxi fare prediction model are as follows:
+Mean Absolute Error 0.8158004544925723
+Mean Squeared Error 2.3300334449661406
+R2 Score For Train Data 0.9633374170276736
+R2 Score For Test Data 0.9577036579202768
 
-## Conclusion
 
-This project demonstrates a complete pipeline for cleaning, feature engineering, and predicting taxi fares. The final model aims to provide accurate predictions by leveraging various features extracted from the dataset.
+
