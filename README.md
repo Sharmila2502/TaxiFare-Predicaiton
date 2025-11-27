@@ -1,6 +1,6 @@
-**Taxi Fare Prediction**
+Urban Taxi Fare Prediction with Machine Learning
 
-This project involves building a predictive model to estimate taxi fares based on various features such as pickup and dropoff locations, date, time, and number of passengers. The project involves several steps, including data cleaning, feature extraction, outlier removal, and distance calculation using the Haversine formula.
+Predict taxi fare amounts for urban rides using a trained Decision Tree model with one-hot encoded categorical features — deployed via an interactive Gradio web app.
 
 ## Table of Contents
 1. [Project Overview](#project-overview)
@@ -11,35 +11,73 @@ This project involves building a predictive model to estimate taxi fares based o
 6. [Evaluation](#evaluation)
 7. [Conclusion](#conclusion)
 
-## Project Overview
+🚖 Project Overview
 
-The main goal of this project is to predict the taxi fare based on a variety of features using a structured machine learning workflow. We focus on data preparation, cleaning, and feature engineering before feeding the data into the machine learning model for prediction.
+This project builds a machine learning model to predict taxi fare amounts based on key trip features such as passenger count, trip distance, duration, rate code, payment type, time of day, and weekday.
 
-## Dataset
+The model leverages:
 
-The dataset consists of 20,000 taxi rides, each with attributes including:
-- Fare amount
-- Pickup and dropoff longitude and latitude
-- Date and time of pickup
-- Number of passengers
+Decision Tree Regressor trained on historical taxi trip data
 
-## Data Preprocessing
+One-Hot Encoding for categorical features like time and weekday
 
-- Handling missing values: No missing values were found in the dataset.
-- Data type conversion: Converted date and time columns to datetime objects for easy manipulation.
-- Outlier detection: Applied outlier removal techniques to clean the data for better model performance.
+A Gradio web interface for interactive user input and instant fare predictions
+
+🎯 Features
+
+Inputs:
+
+Passenger Count
+
+Trip Distance (km)
+
+Trip Duration (minutes)
+
+Rate Code
+
+Payment Type
+
+Time of Day (4AM-8PM or 8PM-4AM)
+
+Trip Date (weekday extracted automatically)
+
+Outputs:
+
+Predicted taxi fare amount (USD)
+
+🚀 Usage
+
+Ensure the following files are present in the project root:
+
+model.pkl (your trained decision tree model)
+
+encoder.pkl (your one-hot encoder)
+
+Run the Gradio app:
+
+python app.py
+
+
+Open the provided local URL in your browser.
+
+Enter trip details using the interactive form and click Predict to get the fare estimate instantly.
 
 ## Feature Engineering
 
 - Time-based features: Extracted features like hour, minute, date, day of the week, month, and year from the pickup date and time.
 - Distance calculation: Used the Haversine formula to compute the distance between pickup and dropoff locations based on their longitude and latitude.
 
-## Model Building
+🧪 Model Training (Optional)
 
-The model-building phase includes:
-- Implementing outlier detection and removal
-- Feature scaling and selection
-- Training and testing on the processed dataset
+If you want to retrain or improve the model, you can:
+
+Use taxi trip datasets with the relevant features
+
+Encode categorical variables using one-hot encoding
+
+Train a Decision Tree Regressor or any other regression model
+
+Save the model and encoder using pickle
 
 ## Evaluation
 
