@@ -91,5 +91,7 @@ R2 Score For Train Data 0.96
 
 R2 Score For Test Data 0.95
 
+![Predicted data](decision tree.png)
+
 
 
