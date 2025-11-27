@@ -6,9 +6,8 @@ import joblib
 from PIL import Image
 from datetime import datetime
 file_path = 'fencod_data.pkl'
-
 with open(file_path , 'rb') as f:
-    dict1 = pickle.load(f)
+    encoder = pickle.load(f)
 model = joblib.load('dt_joblib.pkl')
 st.title("Machine Learning Prediction App")
 st.header("Enter the details for prediction:")
