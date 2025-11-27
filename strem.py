@@ -3,6 +3,8 @@ import numpy as np
 import pickle
 import streamlit as st
 import joblib
+from PIL import Image
+from datetime import datetime
 encoder_path = "fencod_data.pkl" 
 model = joblib.load('dt_joblib.pkl')
 
