@@ -182,47 +182,6 @@ App displays:
 
 👉 Predicted Total Fare Amount
 
-🧾 Dataset: Column Description
-Column	Description
-VendorID	ID of taxi provider
-tpep_pickup_datetime	Trip start datetime
-tpep_dropoff_datetime	Trip end datetime
-passenger_count	Number of passengers
-pickup_longitude	Pickup location longitude
-pickup_latitude	Pickup location latitude
-RatecodeID	Type of rate (standard/JFK/Newark/etc.)
-store_and_fwd_flag	Stored & forwarded flag
-dropoff_longitude	Dropoff longitude
-dropoff_latitude	Dropoff latitude
-payment_type	Payment method
-fare_amount	Base fare amount
-extra	Extra charges
-mta_tax	MTA tax
-tip_amount	Tip given
-tolls_amount	Toll charges
-improvement_surcharge	Fixed surcharge
-total_amount	Target variable: total fare amount
-🚀 How to Run the Project
-1️⃣ Install Dependencies
-pip install -r requirements.txt
-
-2️⃣ Run Jupyter Notebook (for EDA & model creation)
-jupyter notebook
-
-3️⃣ Run Streamlit App
-streamlit run app.py
-
-📦 Project Structure (Example)
-├── data/
-│   └── taxi_data.csv
-├── notebooks/
-│   └── TripFare_Model.ipynb
-├── model/
-│   └── best_model.pkl
-├── app/
-│   └── app.py
-├── README.md
-
 🎉 Project Outcome
 
 ✔ Cleaned and analyzed a real-world transportation dataset
