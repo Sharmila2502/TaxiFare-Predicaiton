@@ -48,6 +48,7 @@ Supervised Machine Learning — Regression
 Target Variable: total_amount
 
 🔧 Project Workflow
+
 1️⃣ Data Collection
 
 Download the taxi dataset
