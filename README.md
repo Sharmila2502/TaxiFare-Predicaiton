@@ -1,83 +1,234 @@
-Urban Taxi Fare Prediction with Machine Learning
+🚗 TripFare — Predicting Urban Taxi Fare with Machine Learning
 
-Predict taxi fare amounts for urban rides using a trained Decision Tree model with one-hot encoded categorical features — deployed via an interactive Gradio web app.
+A complete end-to-end Machine Learning project that analyzes real-world taxi trip records, builds regression models to estimate trip fares, and deploys a working prediction interface using Streamlit.
 
-## Table of Contents
-1. [Project Overview](#project-overview)
-2. [Features](#features)
-3. [Usage](#usage)
-4. [Feature Engineering](#feature-engineering)
-5. [Model Building](#model-building)
-6. [Evaluation](#evaluation)
+🧠 Skills You'll Gain
 
+Exploratory Data Analysis (EDA)
 
-🚖 Project Overview
+Data Cleaning & Preprocessing
 
-This project builds a machine learning model to predict taxi fare amounts based on key trip features such as passenger count, trip distance, duration, rate code, payment type, time of day, and weekday.
+Feature Engineering
 
-The model leverages:
+Data Visualization (Matplotlib, Seaborn)
 
-Decision Tree Regressor trained on historical taxi trip data
+Regression Model Building
 
-One-Hot Encoding for categorical features like time and weekday
+Model Evaluation & Comparison
 
-A Gradio web interface for interactive user input and instant fare predictions
+Hyperparameter Tuning
 
-🎯 Features
+Streamlit Web App Deployment
 
-Inputs:
+Urban Transportation Analytics
 
-Passenger Count
+🌍 Domain: Urban Transportation & Predictive Analytics
+📣 Problem Statement
 
-Trip Distance (km)
+Urban transportation networks generate massive trip-level data. As a Data Analyst at an urban mobility analytics firm, your task is to analyze historical taxi trip records and build a machine learning model that predicts total taxi fare based on ride features such as distance, time, and trip metadata.
 
-Trip Duration (minutes)
+The final output is a Streamlit application where users enter trip-related details and instantly get a predicted taxi fare.
 
-Rate Code
+🎯 Real-World Applications
 
-Payment Type
+Ride-Hailing Apps → Fare prediction before booking
 
-Time of Day (4AM-8PM or 8PM-4AM)
+Driver Incentive Systems → Identify high-demand locations/times
 
-Trip Date (weekday extracted automatically)
+Urban Mobility Insights → Analytics on fare patterns
 
-Outputs:
+Travel Budget Planning → Estimated costs for travelers
 
-Predicted taxi fare amount (USD)
+Shared-Ride Platforms → Dynamic pricing models
 
-🚀 Usage
+🧪 Problem Type
 
-Ensure the following files are present in the project root:
+Supervised Machine Learning — Regression
 
-model.pkl (your trained decision tree model)
+Target Variable: total_amount
 
-encoder.pkl (your one-hot encoder)
+🔧 Project Workflow
+1️⃣ Data Collection
 
-Run the Gradio app:
+Download the taxi dataset
 
-python app.py
+Load using Pandas
 
+2️⃣ Data Understanding
 
-Open the provided local URL in your browser.
+Check:
 
-Enter trip details using the interactive form and click Predict to get the fare estimate instantly.
+Shape & basic info
 
-📜 Feature Engineering
+Datatypes
 
-- Time-based features: Extracted features like hour, minute, date, day of the week, month, and year from the pickup date and time.
-- Distance calculation: Used the Haversine formula to compute the distance between pickup and dropoff locations based on their longitude and latitude.
+Missing values
 
-🧪 Model Training (Optional)
+Duplicate records
 
-If you want to retrain or improve the model, you can:
+3️⃣ Feature Engineering
 
-Use taxi trip datasets with the relevant features
+Derived meaningful columns to improve insights and model performance:
 
-Encode categorical variables using one-hot encoding
+Feature	Description
+trip_distance	Calculated using Haversine formula
+pickup_day	Weekday / Weekend
+am_pm	AM or PM category
+is_night	Binary flag for late-night trips
+pickup_datetime_local	Converted from UTC → EDT
 
-Train a Decision Tree Regressor or any other regression model
+Additional engineered features help analyze fare trends and improve prediction accuracy.
 
-Save the model and encoder using pickle
+4️⃣ Exploratory Data Analysis (EDA)
+
+Performed both univariate and bivariate analysis:
+
+Key analyses:
+
+Fare vs Distance
+
+Fare vs Passenger Count
+
+Outlier detection (fare, distance, duration)
+
+Fare trends across:
+
+Hours
+
+Weekdays vs Weekends
+
+Months
+
+Visualizations include:
+
+Distribution plots
+
+Boxplots
+
+Heatmaps
+
+Time-based demand patterns
+
+5️⃣ Data Transformation
+
+Outlier handling → IQR or Z-score
+
+Skewness transformation → log/sqrt
+
+Encoding categorical variables
+
+6️⃣ Feature Selection
+
+Applied multiple techniques:
+
+Correlation Matrix
+
+Chi-Square Test
+
+RandomForest Feature Importance
+
+Model-based selection
+
+7️⃣ Model Building
+
+Built and evaluated minimum 5 regression models:
+
+Linear Regression
+
+Ridge Regression
+
+Lasso Regression
+
+Random Forest Regressor
+
+Gradient Boosting Regressor
+
+Evaluation metrics:
+
+R²
+
+MAE
+
+MSE
+
+RMSE
+
+8️⃣ Hyperparameter Tuning
+
+Used GridSearchCV / RandomizedSearchCV for the best-performing model.
+
+9️⃣ Finalizing the Best Model
+
+Model saved in Pickle / Joblib format
+
+Loaded inside Streamlit app
+
+🔟 Streamlit UI (Final Deployment)
+
+Built a user-friendly interface where users input:
+
+Pickup latitude/longitude
+
+Dropoff latitude/longitude
+
+Passenger count
+
+Time of travel
+
+Any other engineered features
+
+App displays:
+
+👉 Predicted Total Fare Amount
+
+🧾 Dataset: Column Description
+Column	Description
+VendorID	ID of taxi provider
+tpep_pickup_datetime	Trip start datetime
+tpep_dropoff_datetime	Trip end datetime
+passenger_count	Number of passengers
+pickup_longitude	Pickup location longitude
+pickup_latitude	Pickup location latitude
+RatecodeID	Type of rate (standard/JFK/Newark/etc.)
+store_and_fwd_flag	Stored & forwarded flag
+dropoff_longitude	Dropoff longitude
+dropoff_latitude	Dropoff latitude
+payment_type	Payment method
+fare_amount	Base fare amount
+extra	Extra charges
+mta_tax	MTA tax
+tip_amount	Tip given
+tolls_amount	Toll charges
+improvement_surcharge	Fixed surcharge
+total_amount	Target variable: total fare amount
+🚀 How to Run the Project
+1️⃣ Install Dependencies
+pip install -r requirements.txt
+
+2️⃣ Run Jupyter Notebook (for EDA & model creation)
+jupyter notebook
+
+3️⃣ Run Streamlit App
+streamlit run app.py
+
+📦 Project Structure (Example)
+├── data/
+│   └── taxi_data.csv
+├── notebooks/
+│   └── TripFare_Model.ipynb
+├── model/
+│   └── best_model.pkl
+├── app/
+│   └── app.py
+├── README.md
+
+🎉 Project Outcome
+
+✔ Cleaned and analyzed a real-world transportation dataset
+✔ Engineered new features for deeper insights
+✔ Built, compared, and tuned multiple ML regression models
+✔ Selected best-performing fare prediction model
+✔ Deployed a functional Streamlit application
 
 📈 Evaluation
 
