@@ -144,7 +144,7 @@ Random Forest Regressor
 
 Gradient Boosting Regressor
 
-Evaluation metrics:
+📊 Evaluation Metrics
 
 R²
 
