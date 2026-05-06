@@ -22,14 +22,14 @@ Streamlit Web App Deployment
 
 Urban Transportation Analytics
 
-🌍 Domain: Urban Transportation & Predictive Analytics
+🌍 Domain: Urban Transportation & Predictive Analytics :
 📣 Problem Statement
 
 Urban transportation networks generate massive trip-level data. As a Data Analyst at an urban mobility analytics firm, your task is to analyze historical taxi trip records and build a machine learning model that predicts total taxi fare based on ride features such as distance, time, and trip metadata.
 
 The final output is a Streamlit application where users enter trip-related details and instantly get a predicted taxi fare.
 
-🎯 Real-World Applications
+🎯 Real-World Applications:
 
 Ride-Hailing Apps → Fare prediction before booking
 
@@ -41,7 +41,7 @@ Travel Budget Planning → Estimated costs for travelers
 
 Shared-Ride Platforms → Dynamic pricing models
 
-🧪 Problem Type
+🧪 Problem Type:
 
 Supervised Machine Learning — Regression
 
@@ -49,13 +49,13 @@ Target Variable: total_amount
 
 🔧 Project Workflow
 
-1️⃣ Data Collection
+1️⃣ Data Collection:
 
 Download the taxi dataset
 
 Load using Pandas
 
-2️⃣ Data Understanding
+2️⃣ Data Understanding:
 
 Check:
 
@@ -67,7 +67,7 @@ Missing values
 
 Duplicate records
 
-3️⃣ Feature Engineering
+3️⃣ Feature Engineering:
 
 Derived meaningful columns to improve insights and model performance:
 
@@ -80,7 +80,7 @@ pickup_datetime_local	Converted from UTC → EDT
 
 Additional engineered features help analyze fare trends and improve prediction accuracy.
 
-4️⃣ Exploratory Data Analysis (EDA)
+4️⃣ Exploratory Data Analysis (EDA):
 
 Performed both univariate and bivariate analysis:
 
@@ -110,7 +110,7 @@ Heatmaps
 
 Time-based demand patterns
 
-5️⃣ Data Transformation
+5️⃣ Data Transformation:
 
 Outlier handling → IQR or Z-score
 
@@ -118,7 +118,7 @@ Skewness transformation → log/sqrt
 
 Encoding categorical variables
 
-6️⃣ Feature Selection
+6️⃣ Feature Selection:
 
 Applied multiple techniques:
 
@@ -130,7 +130,7 @@ RandomForest Feature Importance
 
 Model-based selection
 
-7️⃣ Model Building
+7️⃣ Model Building:
 
 Built and evaluated minimum 5 regression models:
 
@@ -144,7 +144,7 @@ Random Forest Regressor
 
 Gradient Boosting Regressor
 
-📊 Evaluation Metrics
+📊 Evaluation Metrics:
 
 R²
 
@@ -154,17 +154,17 @@ MSE
 
 RMSE
 
-8️⃣ Hyperparameter Tuning
+8️⃣ Hyperparameter Tuning:
 
 Used GridSearchCV / RandomizedSearchCV for the best-performing model.
 
-9️⃣ Finalizing the Best Model
+9️⃣ Finalizing the Best Model:
 
 Model saved in Pickle / Joblib format
 
 Loaded inside Streamlit app
 
-🔟 Streamlit UI (Final Deployment)
+🔟 Streamlit UI (Final Deployment):
 
 Built a user-friendly interface where users input:
 
