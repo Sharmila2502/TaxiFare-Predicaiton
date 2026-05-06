@@ -190,7 +190,7 @@ App displays:
 ✔ Selected best-performing fare prediction model
 ✔ Deployed a functional Streamlit application
 
-📈 Evaluation
+📈 Evaluations:
 
 The evaluation metrics and results for the taxi fare prediction model are as follows:
 
